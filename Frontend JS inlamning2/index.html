@@ -1,0 +1,42 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Budget</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1>Budget calculator</h1>
+    <p>Sum revenue: <span id="RevenueSum"></span></p>
+    <p>Sum expenditures: <span id="ExpenditureSum"></span></p>
+    <p>Sum total: <span id="TotalSum"></span></p>
+    <form id="CalculatorForm" onsubmit="addEntry(event)">
+        <label for="RevenueOrExpenditure">+/-</label>
+        <select id="RevenueOrExpenditure">
+            <option value="+" selected>+</option>
+            <option value="-">-</option>
+        </select>
+        <label for="EntryName">Entry name</label>
+        <input type="text" id="EntryName" placeholder="Entry name" required/>
+        <label for="Amount">Input value</label>
+        <input type="number" id="Amount" placeholder="Amount" required/><br>
+        <input type="submit" id="Submit"/>
+    </form>
+    <div class="lists">
+        <div class="list">
+            <h2>Revenue</h2>
+            <ul id="RevenueList"></ul>
+        </div>
+        <div class="list">
+            <h2>Expenditures</h2>
+            <ul id="ExpenditureList"></ul>
+        </div>
+    </div>
+    <script src="javascript.js"></script>
+</body>
+</html>

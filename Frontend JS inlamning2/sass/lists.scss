@@ -1,0 +1,26 @@
+.lists {
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+
+    .list{
+        margin: 0 2rem;
+        text-align: center;
+    }
+}
+
+ul {
+    list-style: none;
+}
+
+@media only screen and (max-width: 700px) { 
+    
+   .lists {
+       flex-direction: column;
+       align-content: center;
+
+       .list{
+           margin: 0;
+        }
+   }
+}
